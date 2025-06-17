@@ -5,7 +5,7 @@ import { WEB_APP_PATH } from './config.js';
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(WEB_APP_PATH)); // <- Le chemin vers les pages web est maintenant géré par le fichier de configuration
+app.use(express.static(WEB_APP_PATH));
 
 // Proxy toutes les requêtes API
 app.use('/api', createProxyMiddleware({
